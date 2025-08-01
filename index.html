@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Raksha Bandhan Surprise:- by prince singh</title>
+  <link rel="stylesheet" href="brotherlove.css" />
+</head>
+<body>
+<audio id="bgMusic" src="rakshabandhan music.mp3" loop autoplay></audio>
+
+
+<!-- Section 1: Intro -->
+<section class="active" id="intro1">
+  <h1>Welcome My Lovely Sisters 😍</h1>
+  <button class="button" onclick="nextSection()">Thank You</button>
+</section>
+
+<!-- Section 2: Intro 2 -->
+<section id="intro2">
+  <h2>Special Rakhi Moments Ahead 🎉</h2>
+  <button class="button" onclick="nextSection()">Next</button>
+</section>
+
+<!-- Section 3: Intro 3 -->
+<section id="intro3">
+  <h2>Are You Ready? 😍</h2>
+  <button class="button" onclick="nextSection()">YES</button>
+</section>
+
+<!-- Password Section -->
+<section id="passwordSec">
+  <h2>🔐 Enter the Secret Password</h2>
+  <div class="password-wrapper">
+    <input type="password" id="passwordInput" placeholder="Enter password" />
+    <span id="togglePassword" style="cursor: pointer;">👁️</span>
+  </div>
+  <button class="button" onclick="checkPassword()">Submit</button>
+  <p id="passwordError" style="color: red; margin-top: 10px;"></p>
+</section>
+
+<!-- Entry Section -->
+<section id="entry">
+  <h1>Happy Rakshabandhan to all my sisters</h1>
+  <h2>From Prince Singh</h2>
+  <button class="button" onclick="nextSection()">Next</button>
+</section>
+
+<!-- 3 Images Section -->
+<section id="image3">
+  <h2>My Efforts🫷🤩</h2>
+  <div class="image-group">
+    <img src="htmlcss.PNG" alt="Image 1">
+    <img src="cssss.PNG" alt="Image 2">
+    <img src="jsss.PNG" alt="Image 3">
+  </div>
+  <button class="button" onclick="nextSection()">Next</button>
+  <button class="button" onclick="showSkipPopup()">Skip</button>
+</section>
+
+<!-- Slideshow Section -->
+<!-- <section> -->
+ <section id="slideshowSection">
+  <div class="slideshow" id="slideshow">
+    <img src="photo2.jpeg" style="display: none;">
+    <img src="photo1.jpeg" style="display: none;">
+    <img src="photo3.jpeg" style="display: none;">
+    <img src="photo4.jpeg" style="display: none;">
+    <img src="photo5.jpeg" style="display: none;">
+    <img src="photo7.jpeg" style="display: none;">
+    <img src="photo8.jpeg" style="display: none;">
+    <img src="photo6.jpeg" style="display: none;">
+    <img src="photo9.jpeg" style="display: none;">
+    <img src="photo11.jpeg" style="display: none;">
+    <img src="photo10.jpeg" style="display: none;">
+    <img src="photo12.jpeg" style="display: none;">
+    <img src="photo13.jpeg" style="display: none;">
+    <img src="photo14.jpeg" style="display: none;">
+    <img src="photo15.jpeg" style="display: none;">
+  </div>
+    <div class="slide-buttons">
+    <button class="button" onclick="prevSlide()">Previous</button>
+    <button class="button" onclick="nextSlide()">Next</button>
+  </div>
+
+  <button class="button skip-button" onclick="showSkipPopup()">⚠️ Skip</button>
+
+</section>
+
+<!-- Video Section 1 -->
+<section id="videoSec">
+  <h2>HISTORY😊</h2>
+  <video id="mainVideo" controls>
+    <source src="raksha bahndhan 1.mp4" type="video/mp4" />
+  </video>
+  <button class="button" onclick="showSkipPopup()">Skip</button>
+</section>
+
+<section id="extraVideo3">
+  <h2>Dekh lena apna apna kya lana hai🤣😜</h2>
+  <video controls>
+    <source src="rakshabandhan2.mp4" type="video/mp4" />
+  </video>
+  <button class="button" onclick="showSkipPopup()">Skip</button>
+</section>
+
+<!-- Extra Video 2 -->
+<section id="extraVideo2">
+  <h2>💕💕💕</h2>
+  <video controls>
+    <source src="rakshabandhan 3.mp4" type="video/mp4" />
+  </video>
+  <button class="button" onclick="showSkipPopup()">Skip</button>
+</section>
+
+<section id="extraVideo5">
+  <h2>🤣😜</h2>
+  <video controls>
+    <source src="rakshabandhan 4.mp4" type="video/mp4" />
+  </video>
+  <button class="button" onclick="showSkipPopup()">Skip</button>
+</section>
+
+<section id="extraVideo7">
+  <h2>Dhekh lena apna-apna kya gift lana hai😜🤣</h2>
+  <video controls>
+    <source src="rakshabandhan 2.mp4" type="video/mp4" />
+  </video>
+  <button class="button" onclick="showSkipPopup()">Skip</button>
+</section>
+
+
+<!-- GIFT SECTION with Heart Animation -->
+<section>
+  <svg viewBox="0 0 600 552">
+    <path d="M300,107.77C284.68,55.67,239.76,0,162.31,0,64.83,0,0,82.08,0,171.71c0,.48,0,.95,0,1.43-.52,19.5,0,217.94,299.87,379.69v0l0,0,.05,0,0,0,0,0v0C600,391.08,600.48,192.64,600,173.14c0-.48,0-.95,0-1.43C600,82.08,535.17,0,437.69,0,360.24,0,315.32,55.67,300,107.77" fill="#ee5282"/>
+  </svg>
+
+  <canvas id="heartCanvas"></canvas>
+  <img src="iphone-in-hand.png" id="iphoneHand" />
+  <div id="giftText">Ye le gift 🤣 uthao jaldi😁</div>
+
+  <img src="gift box.jpg" id="boxClosed" class="drop-box" onclick="openBox()" />
+  <div class="arrow">⬇️ Click to Open ⬇️</div>
+
+  <div id="popupMsg" class="popup" style="display: none;">
+   Ye le Rakshabandhan gift 🤣🤣<br/>Ab gift mat mangna thik 😀😀
+  </div>
+
+  <div id="thankYouMsg" class="popup" style="display: none;">
+    Thanks for Visiting Sisters 💖<br>Lots of love & surprises! 🎉
+  </div>
+
+  <div id="finalWish" class="popup" style="display: none;">
+    Thanks for visiting<br><br>and <br><br>Happy Rakshabandhan from all your brothers 🥳
+  </div>
+   <!-- <div id="popupMessage" class="popup" style="display: none;"></div> -->
+
+</section>
+
+<div class="button-group">
+  <button class="button" onclick="nextSection()">Next</button>
+  <button class="button" onclick="showSkipPopup()">Skip</button>
+</div>
+
+<!-- Footer Text and Instagram -->
+<div class="header-text">By Prince Singh</div>
+<a href="https://www.instagram.com/dp_prince_singh?igsh=MWRxMjJkaXAwZ2x1dA==" target="_blank" class="insta-link">
+  <img src="https://img.icons8.com/color/48/instagram-new--v1.png" class="insta-icon" alt="Instagram">
+</a>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.136.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.136.0/examples/js/controls/OrbitControls.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+<script src="sisterlove.js"></script>
+</body>
+</html>

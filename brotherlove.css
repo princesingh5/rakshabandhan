@@ -1,0 +1,268 @@
+body {
+  background-color: rgb(247, 132, 151);
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+section {
+  display: none;
+  min-height: 100vh;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+section.active {
+  display: flex;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.button {
+  background-color: #fff;
+  color: #d63384;
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  margin: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 10px #ff9ac9;
+  z-index: 999;
+}
+
+.button:hover {
+  background-color: #ffe6f0;
+}
+
+.image-group, .slideshow {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.image-group img, .slideshow img {
+  max-width: 90vw;
+  max-height: 35vh;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #fff;
+  transition: transform 0.3s;
+}
+
+.image-group img:hover, .slideshow img:hover {
+  transform: scale(1.05);
+}
+
+video {
+  max-width: 95vw;
+  max-height: 55vh;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #fff;
+}
+
+.drop-box {
+  width: 200px;
+  height: auto;
+  animation: drop 1s ease-out forwards;
+  box-shadow: 0 0 25px #fff;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+@keyframes drop {
+  0% { transform: translateY(-100vh); }
+  100% { transform: translateY(0); }
+}
+
+.arrow {
+  margin-top: 15px;
+  font-size: 30px;
+  color: red;
+  animation: bounceUpDown 1s infinite;
+}
+
+@keyframes bounceUpDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.popup {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+  box-shadow: 0 0 15px #fff;
+  display: none;
+  animation: fadeIn 1s ease-in-out;
+}
+
+
+.confetti::after {
+  content: '🎊🎉🎊🎉🎊';
+  font-size: 2rem;
+  animation: fall 2s ease-in-out 3;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes fall {
+  0% { top: -10%; }
+  100% { top: 100%; }
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.header-text {
+  position: fixed;
+  top: 10px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: #000;
+}
+
+.insta-link {
+  position: fixed;
+  top: 10px;
+  right: 15px;
+}
+
+.insta-icon {
+  width: 35px;
+  height: 35px;
+  transition: transform 0.2s ease;
+}
+
+.insta-icon:hover {
+  transform: scale(1.2);
+}
+
+.password-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Heart + iPhone + Text Animation (Project 2 merge) */
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+svg {
+  position: absolute;
+  display: none;
+}
+
+#iphoneHand {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, 0) scale(0.5);
+  opacity: 0;
+  max-width: 40vw;
+  height: auto;
+  z-index: 2;
+  transition: all 1.5s ease-in-out;
+}
+
+#iphoneHand.show {
+  transform: translate(-50%, -50%) scale(0.7);
+  opacity: 1;
+}
+
+#giftText {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ee5282;
+  font-size: 2em;
+  font-weight: bold;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 1s ease;
+  text-align: center;
+}
+
+#giftText.show {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  #iphoneHand {
+    max-width: 60vw;
+  }
+
+  #giftText {
+    font-size: 1.5em;
+    top: 36%;
+  }
+}
+.slide-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.skip-button {
+  background-color: red;
+  color: white;
+  display: block;
+  margin: 15px auto 0;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.skip-button:hover {
+  background-color: darkred;
+}
+#finalWish {
+  font-size: 26px;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  margin: 30px auto;
+  border-radius: 12px;
+  width: fit-content;
+  position: relative;
+  z-index: 1000;
+  display: block;      /* Keep it block so it takes space */
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+#finalWish.show {
+  opacity: 1;
+}
